@@ -1,0 +1,153 @@
+@import "variables.css";
+
+.main-info {
+    padding: 60px 0;
+    background: #fff;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 28px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    color: #2c3e50;
+    position: relative;
+}
+
+.section-title::after {
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: var(--primary-color, #27ae60);
+    margin: 10px auto 0;
+}
+
+.features-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 80px;
+}
+
+.feature-card {
+    flex: 1 1 calc(33.333% - 30px); 
+    min-width: 250px; 
+}
+
+.auth-buttons { 
+    display: flex; 
+    gap: 20px; 
+    align-items: center; 
+    margin-left: 20px; 
+}
+
+.comment-item { 
+    background: #fff; 
+    padding: 15px; 
+    margin-bottom: 15px; 
+    border-radius: 8px; 
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.comment-auth-lock {
+    background: #f9f9f9;
+    border: 2px #3498db;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+#linkToReg {
+    color: #3498db;
+    font-weight: 700;
+    text-decoration: none;
+    border-bottom: 1px dashed #3498db;
+    transition: 0.2s;
+    margin-left: 5px;
+}
+
+#linkToReg:hover {
+    color: #2980b9;
+    border-bottom-style: solid;
+}
+
+.tours-action { 
+    text-align: center; 
+    margin-top: 30px; 
+}
+
+#commentForm textarea {
+    width: 100%; 
+    height: 100px; 
+    padding: 15px; 
+    border-radius: 10px; 
+    border: 1px solid #ccc;
+    font-family: inherit;
+    resize: vertical;
+}
+
+#regModal {
+    display: none; 
+    position: fixed; 
+    z-index: 3000; 
+    left: 0; 
+    top: 0; 
+    width: 100%; 
+    height: 100%; 
+    background: rgba(0,0,0,0.85); 
+    align-items: center; 
+    justify-content: center;
+}
+
+.modal-content-box {
+    background: #fff; 
+    padding: 35px; 
+    border-radius: 15px; 
+    width: 90%; 
+    max-width: 400px; 
+    position: relative;
+}
+
+#closeModal {
+    position: absolute; 
+    right: 20px; 
+    top: 15px; 
+    cursor: pointer; 
+    font-size: 30px;
+    color: #333;
+}
+
+.modal-input {
+    width: 100%; 
+    padding: 12px; 
+    margin-bottom: 15px; 
+    border: 1px solid #ddd; 
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+#scrollToTop {
+    display: none; 
+    position: fixed; 
+    bottom: 30px; 
+    right: 30px; 
+    z-index: 1000; 
+    width: 50px; 
+    height: 50px; 
+    border-radius: 50%; 
+    background: var(--color-primary); 
+    color: white; 
+    border: none; 
+    cursor: pointer; 
+    font-size: 24px; 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+
+/* Адаптивність */
+@media (max-width: 768px) {
+    .banner { padding: 40px 15px; }
+    .banner__title { font-size: 24px; }
+}

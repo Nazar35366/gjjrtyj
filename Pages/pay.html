@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Оплата туру — MandryUA</title>
+    <link rel="stylesheet" href="../Styles/style23.css">
+    <link rel="stylesheet" href="../Styles/payment.css">
+    <script src="https://unpkg.com/imask"></script>
+</head>
+<body>
+    <div class="container">
+        <section class="payment-card">
+            <h1 class="payment-card__title">Оплата замовлення</h1>
+            
+            <form class="payment-form" id="payForm">
+                <div class="payment-form__group">
+                    <label class="payment-form__label">Ім'я на картці</label>
+                    <input type="text" id="name" class="payment-form__input" placeholder="IVAN IVANOV" required>
+                    <span class="error-msg"></span>
+                </div>
+
+                <div class="payment-form__group">
+                    <label class="payment-form__label">Номер картки</label>
+                    <input type="text" id="card-number" class="payment-form__input" placeholder="0000 0000 0000 0000" required>
+                    <span class="error-msg"></span>
+                </div>
+
+                <div class="payment-form__row">
+                    <div class="payment-form__group">
+                        <label class="payment-form__label">Термін</label>
+                        <input type="text" id="expiry" class="payment-form__input" placeholder="MM/YY" required>
+                        <span class="error-msg"></span>
+                    </div>
+                    <div class="payment-form__group">
+                        <label class="payment-form__label">CVV</label>
+                        <input type="password" id="cvv" class="payment-form__input" placeholder="***" maxlength="3" required>
+                        <span class="error-msg"></span>
+                    </div>
+                </div>
+
+                <div class="payment-form__actions">
+                    <button type="submit" class="btn btn--primary">Підтвердити оплату</button>
+                    <a href="https://pay.google.com" class="btn btn--gpay">
+                        <img class="img-src" src="https://lh3.googleusercontent.com/VvkiaeSzbG193WrDJ2BReGMeIXOb43AYNwkMmeE7gyBa4qL6CPJwJSt8QZzAIdwZjvOieXi0NBSRz0euRTsIQDztPZKdB4SQdBamQw"  width="60">
+                    </a>
+                </div>
+            </form>
+            
+            <a href="tour.html" class="payment-card__back">Повернутися до вибору туру</a>
+        </section>
+    </div>
+
+    <script src="../JS/pay.js"></script>
+</body>
+</html>

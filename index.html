@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MandryUA — Головна</title>
+    <link rel="stylesheet" href="../Styles/style23.css">
+    <link rel="stylesheet" href="../Styles/home.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <div class="header__row">
+                <a href="index.html" class="header__logo">Mandry<span>UA</span></a>
+                <div class="header__burger" id="burger">
+                    <span></span><span></span><span></span>
+                </div>
+                <nav class="header__nav" id="menu">
+                    <a href="tour.html" class="header__link">Тури</a>
+                    <a href="contact.html" class="header__link">Контакти</a>
+                    <div id="auth-zone" class="auth-buttons">
+                      <a href="#" id="authBtn" class="header__link">Реєстрація</a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="banner">
+        <div class="container">
+            <h1 class="banner__title" id="main-title">Ваша подорож починається тут</h1>
+            <p class="banner__subtitle">MandryUA — це повний супровід від ідеї до повернення додому.</p>
+        </div>
+    </section>
+
+    <main class="main-info">
+        <div class="container">
+            <section class="gallery-section">
+                <h2 class="section-title">Наші тури</h2>
+                <div id="dynamic-gallery" class="features-grid"></div>
+                
+                <div class="tours-action">
+                    <a href="tour.html" class="btn btn--primary">Перейти до всіх турів</a>
+                </div>
+            </section>
+
+            <section class="comments-section">
+                <h2 class="section-title">Відгуки мандрівників</h2>
+                <div id="comments-container"></div>
+                
+                <div id="comment-lock-msg" class="comment-auth-lock">
+                    <p>Бажаєте залишити коментар? <a href="#" id="linkToReg">Зареєструйтеся</a>.</p>
+                </div>
+
+                <form id="commentForm">
+                    <textarea id="commentText" placeholder="Ваш відгук..." required></textarea>
+                    <button type="submit" class="btn btn--primary" style="margin-top:15px;">Надіслати</button>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <div id="regModal">
+        <div class="modal-content-box">
+            <span id="closeModal">&times;</span>
+            <form id="regForm">
+                <h2 id="modalTitle" style="margin-bottom:20px; text-align:center;">Реєстрація</h2>
+                <div id="nameField">
+                    <input type="text" id="uName" placeholder="Ваше ім'я" class="modal-input">
+                </div>
+                <input type="email" id="uEmail" placeholder="Email" required class="modal-input">
+                <input type="password" id="uPass" placeholder="Пароль" required class="modal-input">
+                <button type="submit" class="btn btn--primary" style="width:100%;">Підтвердити</button>
+            </form>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container"><p>&copy; 2026 MandryUA</p></div>
+    </footer>
+
+    <button id="scrollToTop">↑</button>
+
+    <script src="../JS/home.js"></script>
+    <script src="../JS/registration.js"></script>
+</body>
+</html>
